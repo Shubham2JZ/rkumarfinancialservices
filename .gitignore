@@ -1,24 +1,34 @@
+# Node.js
+node_modules/
+dist/
+
+# Vite
+.vite/
+
 # Logs
-logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# Editor / OS files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+*.swp
+*.swo
+.idea/
+.vscode/
+Thumbs.db
+
+# Environment Variables
+.env.local
+.env.*
+!.env.example
+
+# Optional: if you use coverage tools like vitest or jest
+coverage/
+
+# Optional: Mac/Linux trash folder
+.Trash-*
+
+# Optional: Build artifacts from other tools (if used)
+*.tsbuildinfo
