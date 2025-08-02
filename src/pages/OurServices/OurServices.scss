@@ -1,0 +1,152 @@
+@import "../../styles/variables";
+
+.OurServices {
+  background-color: white;
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    background: var(--gradient-subtle);
+    padding: 5rem 1rem;
+    gap: 1rem;
+
+    .main-heading {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 4rem;
+      text-align: center;
+
+      .highlighted {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .sub-heading {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      > div {
+        max-width: 60rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--muted-foreground);
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    background: var(--gradient-subtle);
+    padding: 4rem 2rem;
+    gap: 1rem;
+
+    .our-story {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+
+      &-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .main-heading {
+          font-size: 2.25rem;
+          font-weight: 700;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          color: var(--muted-foreground);
+        }
+      }
+      .numbers {
+        flex: 1;
+        background: var(--gradient-subtle);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        border-radius: 1rem;
+        padding: 1rem;
+
+        .grid-item {
+          padding: 1rem;
+
+          &-number {
+            font-size: 2rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-align: center;
+          }
+
+          &-label {
+            color: var(--muted-foreground);
+            text-align: center;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .card-container {
+      display: flex;
+      gap: 3rem;
+      padding: 2rem;
+
+      .card {
+        flex: 1;
+        background-color: white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        border-radius: 1rem;
+
+        &-logo {
+          background: var(--gradient-primary);
+          width: 4rem;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+        }
+
+        &-heading {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        &-content {
+          font-size: 1rem;
+          line-height: 1.625rem;
+          color: var(--muted-foreground);
+        }
+      }
+    }
+
+    .main-heading {
+      font-size: 2.25rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .sub-heading {
+      text-align: center;
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      line-height: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+}

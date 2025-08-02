@@ -1,0 +1,140 @@
+@import "../../styles/variables";
+
+.SuccessStories {
+  background-color: white;
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    background: var(--gradient-subtle);
+    padding: 5rem 1rem;
+    gap: 1rem;
+
+    .main-heading {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 4rem;
+      text-align: center;
+
+      .highlighted {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .sub-heading {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      > div {
+        max-width: 60rem;
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--muted-foreground);
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    background: var(--gradient-subtle);
+    padding: 4rem 2rem;
+    gap: 1rem;
+
+    .stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+      margin-bottom: 6rem;
+
+      .stat-item {
+        flex: 1 1 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .stat-icon {
+          background: var(--gradient-primary);
+          color: white;
+          font-size: 1.5rem;
+          border-radius: 50%;
+          width: 4rem;
+          aspect-ratio: 1/1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1rem;
+        }
+
+        .stat-value {
+          font-size: 1.875rem;
+          font-weight: 700;
+          color: var(--primary);
+        }
+
+        .stat-label {
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: var(--muted-foreground); // Tailwind gray-500
+        }
+      }
+    }
+
+    .main-heading {
+      font-size: 2.25rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .sub-heading {
+      text-align: center;
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      line-height: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .more-success-stories-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 1rem;
+      margin-bottom: 8rem;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      // Small screens (phones)
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .industries-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+
+      .industry {
+        font-size: 0.875rem;
+        background: white;
+        padding: 1rem 2rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background: var(--primary);
+          color: white;
+        }
+      }
+    }
+  }
+}

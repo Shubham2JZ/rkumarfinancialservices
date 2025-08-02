@@ -1,0 +1,70 @@
+:root {
+  // === Base Colors ===
+  --background: #ffffff;
+  --foreground: #232f3a;
+
+  --card: #ffffff;
+  --card-foreground: #232f3a;
+
+  --popover: #ffffff;
+  --popover-foreground: #232f3a;
+
+  // === Brand Colors ===
+  --primary: #1377e7;
+  --primary-foreground: #ffffff;
+
+  --secondary: #2ec4f1;
+  --secondary-foreground: #232f3a;
+
+  // === Muted / Neutral ===
+  --muted: #ededed;
+  --muted-foreground: #5f6c7a;
+
+  --accent: #2ec4f1;
+  --accent-foreground: #232f3a;
+
+  // === Destructive ===
+  --destructive: #e64848;
+  --destructive-foreground: #ffffff;
+
+  // === Border / Input ===
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #1377e7;
+
+  // === Custom Brand ===
+  --brand-deep-blue: #1377e7;
+  --brand-sky-blue: #2ec4f1;
+  --brand-neutral-grey: #ededed;
+  --brand-accent-gold: #f6c441;
+  --brand-accent-lime: #a8e65c;
+
+  // === Gradients ===
+  --gradient-primary: linear-gradient(135deg, #1377e7, #2ec4f1);
+  --gradient-subtle: linear-gradient(180deg, #ffffff, #ededed);
+
+  // === Shadows ===
+  --shadow-elegant: 0 10px 30px -10px rgba(19, 119, 231, 0.3);
+  --shadow-card: 0 4px 20px -4px rgba(19, 119, 231, 0.15);
+  --shadow-glow: 0 0 40px rgba(46, 196, 241, 0.4);
+
+  // === Animations ===
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  // === UI Radius ===
+  --radius: 0.5rem;
+
+  // === Sidebar ===
+  --sidebar-background: #fafafa;
+  --sidebar-foreground: #3f3f46;
+
+  --sidebar-primary: #19191c;
+  --sidebar-primary-foreground: #fafafa;
+
+  --sidebar-accent: #f3f3f5;
+  --sidebar-accent-foreground: #19191c;
+
+  --sidebar-border: #e4e7eb;
+  --sidebar-ring: #2680eb;
+}

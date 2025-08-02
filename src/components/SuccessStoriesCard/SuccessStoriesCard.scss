@@ -1,0 +1,72 @@
+@import "../../styles/variables";
+
+.SuccessStoriesCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  .tags {
+    display: flex;
+    justify-content: space-between;
+
+    .tag {
+      display: inline-block;
+      background: var(--secondary);
+      font-size: 0.7rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 4rem;
+      font-weight: 500;
+
+      &.type-2 {
+        background-color: transparent;
+        border: 1px solid #aaa;
+      }
+
+      &.type-3 {
+        background: var(--gradient-primary);
+        color: white;
+      }
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .content {
+    color: var(--muted-foreground);
+    font-size: 0.9rem;
+  }
+
+  .parameters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .parameter {
+      display: flex;
+      justify-content: space-between;
+
+      &-title {
+        color: var(--muted-foreground);
+        font-size: 0.9rem;
+      }
+
+      &-value {
+        font-size: 0.9rem;
+
+        &.color {
+          color: var(--primary);
+        }
+
+        &.bold {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

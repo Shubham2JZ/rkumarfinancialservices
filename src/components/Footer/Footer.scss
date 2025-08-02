@@ -1,0 +1,121 @@
+.footer {
+  background: linear-gradient(135deg, #1377e7, #2ec4f1);
+  color: white;
+  padding: 3rem;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  &-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &-logo {
+    width: 2rem;
+    background-color: white;
+    padding: 0.7rem 0.5rem;
+    border-radius: 2px;
+  }
+
+  &-company-name {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  &-company-subtext {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+
+  &-description {
+    opacity: 0.8;
+    max-width: 400px;
+    margin-bottom: 1.5rem;
+  }
+
+  &-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  &-link {
+    color: white;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+
+    p{
+        opacity: 0.6;
+        font-size: 0.8rem;
+    }
+  }
+
+  &-policy-links {
+    display: flex;
+    gap: 2rem;
+    
+    a {
+      color: white;
+      opacity: 0.6;
+      text-decoration: none;
+      font-size: 0.8rem;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    &-grid {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    &-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
