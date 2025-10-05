@@ -95,7 +95,7 @@
         max-width: 40rem;
         text-align: center;
         font-size: 1.25rem;
-        color: var(--muted-foreground)
+        color: var(--muted-foreground);
       }
     }
 
@@ -136,7 +136,7 @@
         &-content {
           font-size: 0.9rem;
           text-align: center;
-          color: var(--muted-foreground)
+          color: var(--muted-foreground);
         }
       }
     }
@@ -159,7 +159,7 @@
 
         &-sub-heading {
           font-size: 1.25rem;
-          color: var(--muted-foreground)
+          color: var(--muted-foreground);
         }
 
         &-grid-container {
@@ -217,7 +217,7 @@
     .sub-heading {
       text-align: center;
       font-size: 1.25rem;
-      color: var(--muted-foreground)
+      color: var(--muted-foreground);
     }
 
     .reviews-container {
@@ -248,7 +248,7 @@
 
         &-user-company {
           font-size: 0.8rem;
-          color: var(--muted-foreground)
+          color: var(--muted-foreground);
         }
       }
     }
@@ -318,5 +318,13 @@
         }
       }
     }
+  }
+  .section-5 {
+    display: flex;
+    flex-direction: column;
+    background: var(--gradient-subtle);
+
+    padding: 5rem 1rem;
+    gap: 1rem;
   }
 }

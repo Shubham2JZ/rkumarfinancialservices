@@ -1,6 +1,8 @@
 import { Button } from "@mui/material";
 import "./Home.scss";
 import { Link } from "react-router-dom";
+import FAQs from "../../components/FAQs";
+import UpcomingIPOs from "../../components/UpcomingIPOs";
 
 const section2ItemList = [
   {
@@ -180,6 +182,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <UpcomingIPOs />
       <div className="section-4">
         <div className="main-heading">Ready to Grow Together ?</div>
         <div className="sub-heading">
@@ -207,6 +210,7 @@ const Home = () => {
           </Button>
         </div>
       </div>
+      <FAQs />
     </div>
   );
 };
