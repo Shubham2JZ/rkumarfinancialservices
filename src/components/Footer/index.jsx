@@ -20,7 +20,7 @@ const Footer = () => {
             expertise.
           </p>
           <div className="footer-contact">
-            <div>+91 81281 03775</div>
+            <div>+91 91040 21295</div>
             <div>info@rkumarfinancial.com</div>
             <div>
               305, The Centrium, 3rd Floor, 57, Lal Bahadur Shastri Road, Nav
