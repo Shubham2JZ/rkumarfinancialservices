@@ -3,6 +3,7 @@
 .AboutUs {
   background-color: white;
 
+  // === SECTION 1 ===
   .section-1 {
     display: flex;
     flex-direction: column;
@@ -20,6 +21,7 @@
         background: var(--gradient-primary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-wrap: nowrap;
       }
     }
 
@@ -38,15 +40,15 @@
     }
   }
 
+  // === SECTION 2 ===
   .section-2 {
     display: flex;
     flex-direction: column;
     background: var(--gradient-subtle);
     padding: 4rem 1rem;
-    gap: 1rem;
+    gap: 2rem;
 
     .our-story {
-      flex: 1;
       display: flex;
       align-items: center;
       gap: 2rem;
@@ -66,18 +68,19 @@
         .content {
           display: flex;
           flex-direction: column;
-          gap: 2rem;
+          gap: 1.5rem;
           color: var(--muted-foreground);
         }
       }
+
       .numbers {
         flex: 1;
-        background: var(--gradient-subtle);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
+        gap: 1rem;
         border-radius: 1rem;
         padding: 1rem;
+        background: white;
 
         .grid-item {
           padding: 1rem;
@@ -97,13 +100,16 @@
         }
       }
     }
+
     .card-container {
       display: flex;
       gap: 3rem;
       padding: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
 
       .card {
-        flex: 1;
+        flex: 1 1 20rem;
         background-color: white;
         padding: 2rem;
         display: flex;
@@ -135,12 +141,14 @@
       }
     }
   }
+
+  // === SECTION 3 ===
   .section-3 {
     display: flex;
     flex-direction: column;
     background: var(--gradient-subtle);
     padding: 4rem 1rem;
-    gap: 1rem;
+    gap: 2rem;
 
     .main-heading {
       font-size: 2.25rem;
@@ -163,31 +171,28 @@
       margin-bottom: 5rem;
 
       .card {
-        padding: 2rem;
         display: flex;
         gap: 1.5rem;
         border-radius: 1rem;
+        align-items: center;
+        padding: 1.5rem;
 
         &-left {
           .year {
             background: var(--gradient-primary);
             width: 5rem;
-            font-size: 1.125rem;
-            font-weight: 600;
             aspect-ratio: 1/1;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
+            font-weight: 600;
+            font-size: 1.125rem;
           }
         }
 
         &-right {
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-
           .heading {
             font-size: 1.25rem;
             font-weight: 600;
@@ -204,19 +209,21 @@
 
     .card-container {
       display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
+      justify-content: center;
       padding: 2rem;
-      margin-top: 2rem;
 
       .card {
-        flex: 1;
+        flex: 1 1 16rem;
         background-color: white;
         padding: 2rem 1rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 0.5rem;
         border-radius: 1rem;
-        align-items: center;
+        text-align: center;
 
         &-image {
           background: var(--gradient-primary);
@@ -224,11 +231,11 @@
           aspect-ratio: 1/1;
           border-radius: 50%;
           display: flex;
-          font-size: 1.5rem;
-          font-weight: 600;
           justify-content: center;
           align-items: center;
           color: white;
+          font-size: 1.5rem;
+          font-weight: 600;
         }
 
         &-username {
@@ -237,30 +244,27 @@
         }
 
         &-position {
-          font-size: 0.875rem;
-          font-weight: 500;
           color: var(--primary);
+          font-size: 0.9rem;
+          font-weight: 500;
         }
 
-        &-experience {
-          font-size: 0.875rem;
-          color: var(--muted-foreground);
-        }
-
+        &-experience,
         &-fields {
           font-size: 0.875rem;
           color: var(--muted-foreground);
-          text-align: center;
         }
       }
     }
   }
+
+  // === SECTION 4 ===
   .section-4 {
     display: flex;
     flex-direction: column;
     background: var(--gradient-subtle);
     padding: 4rem 1rem;
-    gap: 1rem;
+    gap: 2rem;
 
     .main-heading {
       font-size: 2.25rem;
@@ -277,18 +281,21 @@
 
     .card-container {
       display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
+      justify-content: center;
       padding: 2rem;
-      margin-top: 2rem;
 
       .card {
-        flex: 1;
+        flex: 1 1 16rem;
+        background: white;
+        border-radius: 1rem;
         padding: 2rem 1rem;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        border-radius: 1rem;
         align-items: center;
+        gap: 1rem;
+        text-align: center;
 
         &-logo {
           background: var(--gradient-primary);
@@ -296,11 +303,10 @@
           aspect-ratio: 1/1;
           border-radius: 50%;
           display: flex;
-          font-size: 1.5rem;
-          font-weight: 600;
           justify-content: center;
           align-items: center;
           color: white;
+          font-weight: 600;
         }
 
         &-heading {
@@ -309,11 +315,79 @@
         }
 
         &-content {
-          font-size: 0.875rem;
+          font-size: 0.9rem;
           color: var(--muted-foreground);
-          text-align: center;
         }
       }
+    }
+  }
+
+  /* === RESPONSIVENESS === */
+  @media (max-width: 1200px) {
+    .section-3 .timeline {
+      padding: 2rem 6rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .section-2 .our-story {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .section-3 .timeline {
+      padding: 2rem 3rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .section-1 .main-heading {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    .section-1 .sub-heading > div {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+
+    .section-2 {
+      .numbers {
+        grid-template-columns: 1fr;
+      }
+
+      .our-story {
+        &-left {
+          .main-heading {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .section-3 .timeline {
+      padding: 1rem;
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+        .card-left .year {
+          width: 4rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .section-3 .card-container,
+    .section-4 .card-container {
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    .section-2 .card-container .card,
+    .section-3 .card-container .card,
+    .section-4 .card-container .card {
+      flex: 1 1 100%;
+      padding: 1.5rem;
     }
   }
 }

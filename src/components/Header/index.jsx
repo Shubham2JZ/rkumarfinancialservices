@@ -1,20 +1,18 @@
 import {
   AppBar,
   Box,
-  Button,
   Drawer,
-  IconButton,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
-  Toolbar,
+  Toolbar
 } from "@mui/material";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import rkFullLogo from "../../assets/icons/rk-logo-full.png";
 import "./Header.scss";
-import { useLocation } from "react-router-dom";
 
 const navItems = [
   { text: "Home", path: "/" },
@@ -25,10 +23,10 @@ const navItems = [
   { text: "Contact", path: "/contact" },
 ];
 
-export default function Header({ isMobile }) {
+export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const location = useLocation();
+  // const location = useLocation();
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
@@ -50,9 +48,13 @@ export default function Header({ isMobile }) {
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <img src={rkFullLogo} className="Header-logo" alt="RK Logo" />
 
-          {isMobile ? (
-            <IconButton color="inherit" onClick={toggleDrawer(true)}>
-              Hi
+          {/* {isMobile ? (
+            <IconButton
+              color="inherit"
+              onClick={toggleDrawer(true)}
+              aria-label="open drawer"
+            >
+              <MenuIcon />
             </IconButton>
           ) : (
             <Box
@@ -77,7 +79,7 @@ export default function Header({ isMobile }) {
                 );
               })}
             </Box>
-          )}
+          )} */}
         </Toolbar>
       </AppBar>
 

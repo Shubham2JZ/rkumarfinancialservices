@@ -44,6 +44,10 @@
     flex-direction: column;
     gap: 0.5rem;
     font-size: 0.9rem;
+
+    >div{
+      max-width: 25rem;
+    }
   }
 
   &-section {

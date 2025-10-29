@@ -3,9 +3,17 @@
 .Home {
   background-color: white;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .section-1 {
     display: flex;
-    background: var(--gradient-subtle);
+    background-image: url("https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
 
     &-left {
       flex: 1;
@@ -20,6 +28,7 @@
         font-size: 3.5rem;
         font-weight: 700;
         line-height: 4rem;
+        color: rgb(211, 211, 211);
 
         .highlighted {
           background: linear-gradient(to right, #408aeb, #0060db);
@@ -30,14 +39,19 @@
 
       .sub-heading {
         font-size: 1.25rem;
-        color: var(--muted-foreground);
+        color: rgb(225, 223, 223);
         font-weight: 400;
         line-height: 1.625;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.284);
+        backdrop-filter: blur(3px);
+        border-radius: 10px;
       }
 
       .button-container {
         display: flex;
         gap: 1rem;
+        flex-wrap: wrap;
 
         .button-1 {
           background: linear-gradient(to right, #408aeb, #0060db);
@@ -70,13 +84,17 @@
 
     &-right {
       flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
     }
   }
+
   .section-2 {
     display: flex;
     flex-direction: column;
     background: var(--gradient-subtle);
-
     padding: 5rem 1rem;
     gap: 1rem;
 
@@ -102,6 +120,8 @@
     .item-list-container {
       margin-top: 2rem;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 2rem;
 
       .item {
@@ -111,7 +131,9 @@
         align-items: center;
         border-radius: 2rem;
         padding: 2rem;
+        width: 15rem;
         transition: all 0.2s;
+        text-align: center;
 
         &:hover {
           background-color: #ddd;
@@ -144,17 +166,28 @@
     .why-choose {
       display: flex;
       margin-top: 3rem;
+      flex-wrap: wrap;
+
+      &-left,
+      &-right {
+        flex: 1 1 40%;
+      }
 
       &-left {
-        flex: 1;
         padding: 2rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        align-items: center;
+        text-align: center;
 
         &-main-heading {
-          font-size: 2.25rem;
+          font-size: 2rem;
           font-weight: 700;
+
+          span {
+            text-wrap: nowrap;
+          }
         }
 
         &-sub-heading {
@@ -164,14 +197,15 @@
 
         &-grid-container {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 0.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 1rem;
+          width: 100%;
 
           .grid-item {
             padding: 1rem;
 
             &-number {
-              font-size: 2.5rem;
+              font-size: 2rem;
               color: #0060db;
               font-weight: 700;
               text-align: center;
@@ -180,21 +214,26 @@
             &-label {
               color: var(--muted-foreground);
               text-align: center;
-              font-size: 1rem;
+              font-size: 0.9rem;
             }
           }
         }
       }
 
       &-right {
-        flex: 1;
+        padding: 2rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding: 5rem 1rem 1rem 1rem;
+        align-items: flex-start;
+        justify-content: center;
 
         .list-item {
-          font-size: 1.125rem;
+          font-size: 1rem;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
         }
       }
     }
@@ -204,7 +243,6 @@
     display: flex;
     flex-direction: column;
     background: var(--gradient-subtle);
-
     padding: 5rem 1rem;
     gap: 1rem;
 
@@ -222,28 +260,36 @@
 
     .reviews-container {
       display: flex;
+      justify-content: center;
       gap: 1rem;
-      margin-bottom: 7rem;
+      margin-bottom: 4rem;
       padding: 2rem;
+      overflow-x: auto;
 
       .review {
         padding: 1rem;
+        min-width: 18rem;
+        max-width: 18rem;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
         &-stars {
           color: gold;
-          font-size: 2rem;
-          line-height: 2rem;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
         }
 
         &-content {
           font-style: italic;
           color: var(--muted-foreground);
           font-size: 0.9rem;
+          margin-top: 0.5rem;
         }
 
         &-user {
           font-weight: 500;
-          margin-top: 2rem;
+          margin-top: 1rem;
         }
 
         &-user-company {
@@ -257,7 +303,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
 
       &-heading {
         font-size: 1.5rem;
@@ -266,44 +312,46 @@
 
       &-content {
         display: flex;
-        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: #777;
       }
     }
   }
+
   .section-4 {
     display: flex;
     flex-direction: column;
     background: linear-gradient(135deg, #1377e7, #2ec4f1);
     padding: 5rem 1rem;
     gap: 1rem;
+    text-align: center;
 
     .main-heading {
-      text-align: center;
-      font-size: 2.25rem;
+      font-size: 2rem;
       font-weight: 700;
       color: white;
     }
 
     .sub-heading {
-      text-align: center;
       display: flex;
       justify-content: center;
 
       > div {
-        max-width: 50rem;
-        text-align: center;
-        font-size: 1.25rem;
+        max-width: 30rem;
+        font-size: 1.125rem;
         color: white;
       }
     }
 
     .button-container {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       justify-content: center;
+      flex-wrap: wrap;
       margin-top: 1rem;
 
       .button {
@@ -319,12 +367,100 @@
       }
     }
   }
-  .section-5 {
-    display: flex;
-    flex-direction: column;
-    background: var(--gradient-subtle);
+}
 
-    padding: 5rem 1rem;
-    gap: 1rem;
+/* ✅ Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .Home {
+    .section-1 {
+      flex-direction: column;
+      text-align: center;
+      height: 95vh;
+
+      &-left {
+        padding: 2rem;
+        height: auto;
+        align-items: center;
+      }
+
+      &-right {
+        display: none; // Hide or show smaller image version
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Home {
+    .section-2 {
+      .item-list-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .why-choose {
+        flex-direction: column;
+
+        &-right {
+          padding: 1rem;
+          align-items: flex-start;
+        }
+      }
+      .why-choose {
+        display: flex;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+
+        &-left,
+        &-right {
+          flex: 1 1 40%;
+        }
+
+        &-left {
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          align-items: center;
+          text-align: center;
+
+          &-main-heading {
+            font-size: 2rem;
+            font-weight: 700;
+
+            span {
+              text-wrap: nowrap;
+            }
+          }
+
+          &-sub-heading {
+            font-size: 1.25rem;
+            color: var(--muted-foreground);
+          }
+
+          &-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .section-3 {
+      .trusted-by {
+        &-heading {
+          text-align: center;
+        }
+      }
+    }
+
+    .section-4 {
+      .button-container {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
   }
 }

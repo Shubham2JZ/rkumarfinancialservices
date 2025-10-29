@@ -3,28 +3,34 @@ import "./Home.scss";
 import { Link } from "react-router-dom";
 import FAQs from "../../components/FAQs";
 import UpcomingIPOs from "../../components/UpcomingIPOs";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import StarIcon from "@mui/icons-material/Star";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
+import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
+import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOutlined";
 
 const section2ItemList = [
   {
-    icon: "G",
+    icon: <TrendingUpIcon />,
     heading: "IPO Advisory & Execution",
     content:
       "Complete guidance from planning to listing with proven track record",
   },
   {
-    icon: "S",
+    icon: <ShieldOutlinedIcon />,
     heading: "Regulatory Compliance",
     content:
       "Expert navigation through complex regulations and compliance requirements",
   },
   {
-    icon: "P",
+    icon: <PeopleAltOutlinedIcon />,
     heading: "Fundraising Strategy",
     content:
       "Strategic capital raising solutions tailored to your business needs",
   },
   {
-    icon: "M",
+    icon: <WorkspacePremiumOutlinedIcon />,
     heading: "Investor Relations",
     content:
       "Building strong relationships with investors for sustainable growth",
@@ -87,7 +93,7 @@ const Home = () => {
             for companies ready to scale. Transform your business vision into
             capital market success.
           </div>
-          <div className="button-container">
+          {/* <div className="button-container">
             <Button
               sx={{ textTransform: "none" }}
               component={Link}
@@ -104,9 +110,9 @@ const Home = () => {
             >
               View Success Stories
             </Button>
-          </div>
+          </div> */}
         </div>
-        <div className="section-1-right">Image</div>
+        <div className="section-1-right"></div>
       </div>
       <div className="section-2">
         <div className="main-heading">Comprehensive Financial Services</div>
@@ -128,7 +134,7 @@ const Home = () => {
         <div className="why-choose">
           <div className="why-choose-left">
             <div className="why-choose-left-main-heading">
-              Why Choose R Kumar Financial?
+              Why Choose <span>R Kumar Financial?</span>
             </div>
             <div className="why-choose-left-sub-heading">
               Trusted expertise with a proven track record of transforming
@@ -145,7 +151,10 @@ const Home = () => {
           </div>
           <div className="why-choose-right">
             {section2WhyChooseList.map((n) => (
-              <div className="list-item">* {n}</div>
+              <div className="list-item">
+                <CheckCircleOutlineIcon color="primary" />
+                {n}
+              </div>
             ))}
           </div>
         </div>
@@ -160,7 +169,7 @@ const Home = () => {
             <div className="review" key={i}>
               <div className="review-stars">
                 {Array.from({ length: n.stars }, (_, i) => (
-                  <span key={i}>*</span>
+                  <StarIcon key={i} sx={{ color: "#FFD700" }} />
                 ))}
               </div>
               <div className="review-content">"{n.content}"</div>
@@ -182,7 +191,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <UpcomingIPOs />
+      {/* <UpcomingIPOs /> */}
       <div className="section-4">
         <div className="main-heading">Ready to Grow Together ?</div>
         <div className="sub-heading">
@@ -191,7 +200,7 @@ const Home = () => {
             success. Get in touch for a free consultation today.
           </div>
         </div>
-        <div className="button-container">
+        {/* <div className="button-container">
           <Button
             sx={{ textTransform: "none" }}
             component={Link}
@@ -208,7 +217,7 @@ const Home = () => {
           >
             Download our Brochure
           </Button>
-        </div>
+        </div> */}
       </div>
       <FAQs />
     </div>
