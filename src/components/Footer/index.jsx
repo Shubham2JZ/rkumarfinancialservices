@@ -5,6 +5,12 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
+const services = [
+  { label: "IPO", link: "/services/ipo" },
+  { label: "Capital Raising", link: "/services/capital-raising" },
+  { label: "Finance Advisory", link: "/services/finance-advisory" },
+];
+
 const Footer = () => {
   return (
     <div className="footer">
@@ -66,8 +72,10 @@ const Footer = () => {
         <div className="footer-section">
           <h4 className="footer-heading">Services</h4>
           <ul className="footer-list">
-            {["IPO", "Capital Raising", "Finance Advisory"].map((service) => (
-              <li key={service}>{service}</li>
+            {services.map((service) => (
+              <li key={service.label}>
+                <Link to={service.link}>{service.label}</Link>
+              </li>
             ))}
           </ul>
         </div>

@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Resources from "./pages/Resources";
 import Services from "./pages/Services";
 import SuccessStories from "./pages/SuccessStories";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const theme = useTheme();
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header isMobile={isMobile} />
+      <ScrollToTop />
       <Routes>
         {/* Main Routes */}
         <Route path="/" element={<Home />} />
@@ -26,8 +28,6 @@ function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services/:serviceSlug" element={<Services />} />
-
-      
       </Routes>
       <Footer />
     </div>
