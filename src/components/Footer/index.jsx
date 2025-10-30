@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import rkLogo from "../../assets/icons/rk-logo.png";
 import "./Footer.scss";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const Footer = () => {
   return (
@@ -20,12 +23,23 @@ const Footer = () => {
             expertise.
           </p>
           <div className="footer-contact">
-            <div>+91 91040 21295</div>
-            <div>info@rkumarfinancial.com</div>
             <div>
-              305, The Centrium, 3rd Floor, 57,
-              Lal Bahadur Shastri Road, Nav Pada,
-              Kurla (West), Mumbai – 400 070, Maharashtra, India.
+              <PhoneIcon /> +91 91040 21295
+            </div>
+            <div>
+              <EmailIcon /> info@rkumarfinancial.com
+            </div>
+            <div>
+              <LocationOnIcon /> 305, The Centrium, 3rd Floor, 57, Lal Bahadur
+              Shastri Road, Nav Pada, Kurla (West), Mumbai – 400 070,
+              Maharashtra, India.
+            </div>
+            <div>
+              <LocationOnIcon />
+              <span>
+                <b>Upcoming Address:</b> A-101, Shivalik Curv, Gift City,
+                Gandhinagar, Gujarat, 382355
+              </span>
             </div>
           </div>
         </div>

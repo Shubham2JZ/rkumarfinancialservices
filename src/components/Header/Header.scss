@@ -1,5 +1,4 @@
-@import '../../styles/variables';
-
+@import "../../styles/variables";
 
 .Header {
   color: #1d2530;
@@ -32,7 +31,34 @@
       &.active {
         color: var(--primary);
         border-bottom: 2px solid var(--primary);
+        background-color: rgba(0, 0, 0, 0.02);
       }
     }
   }
+}
+
+.MuiMenu-paper {
+  padding: 0.3rem 0.5rem !important;
+  border-radius: 6px !important;
+  margin-top: 10px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiMenuItem-root {
+  font-weight: 500 !important;
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    color: var(--primary);
+  }
+}
+
+.MuiCollapse-root .MuiListItemButton-root {
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding-left: 2rem;
+}
+
+.MuiListItemButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
 }

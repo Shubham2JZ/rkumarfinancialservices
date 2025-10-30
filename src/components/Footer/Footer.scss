@@ -45,8 +45,11 @@
     gap: 0.5rem;
     font-size: 0.9rem;
 
-    >div{
+    > div {
       max-width: 25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
     }
   }
 
@@ -92,16 +95,16 @@
     gap: 1rem;
     font-size: 0.8rem;
 
-    p{
-        opacity: 0.6;
-        font-size: 0.8rem;
+    p {
+      opacity: 0.6;
+      font-size: 0.8rem;
     }
   }
 
   &-policy-links {
     display: flex;
     gap: 2rem;
-    
+
     a {
       color: white;
       opacity: 0.6;

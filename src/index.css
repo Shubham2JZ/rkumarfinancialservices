@@ -3,3 +3,7 @@ body {
   margin: 0rem !important;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}

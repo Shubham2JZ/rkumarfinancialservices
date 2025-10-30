@@ -38,15 +38,15 @@ const section2ItemList = [
 ];
 
 const section2GridContent = [
-  { number: "25+", label: "Years Experience" },
-  { number: "100+", label: "Successful IPOs" },
-  { number: "50B+", label: "Capital Raised" },
-  { number: "₹500+", label: "Happy Clients" },
+  { number: "3+", label: "Years Experience" },
+  { number: "2", label: "Running IPOs" },
+  { number: "100Cr+", label: "Capital Raised" },
+  { number: "50+", label: "Happy Clients" },
 ];
 
 const section2WhyChooseList = [
-  "25+ years of capital market expertise",
-  "100+ successful IPO completions",
+  "3+ years of capital market expertise",
+  "2 Running IPOs",
   "Comprehensive regulatory compliance",
   "Personalized strategic guidance",
   "End-to-end service support",
@@ -77,7 +77,7 @@ const section3ReviewsData = [
   },
 ];
 
-const section3TrustedByList = ["BSE", "NSE", "SEBI", "ICAI", "CII", "FICCI"];
+const section3TrustedByList = ["BSE", "NSE", "SEBI", "FICCI"];
 
 const Home = () => {
   return (
@@ -189,6 +189,7 @@ const Home = () => {
               </div>
             ))}
           </div>
+          <div className="trusted-by-footer">Listing coming soon</div>
         </div>
       </div>
       {/* <UpcomingIPOs /> */}
