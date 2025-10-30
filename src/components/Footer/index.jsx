@@ -23,8 +23,8 @@ const Footer = () => {
             <div>+91 91040 21295</div>
             <div>info@rkumarfinancial.com</div>
             <div>
-              305, The Centrium, 3rd Floor, 57, Lal Bahadur Shastri Road, Nav
-              Pada, Kurla (West), Mumbai – 400 070, Maharashtra, India.
+              GF, SHop no 21, Haridarshan Complex, Near Patel Society,
+              Malod Road, Ratanpar, Surendranagar, Gujarat, 363020
             </div>
           </div>
         </div>
