@@ -29,9 +29,9 @@ const Footer = () => {
             expertise.
           </p>
           <div className="footer-contact">
-            <div>
+            {/* <div>
               <PhoneIcon /> +91 91040 21295
-            </div>
+            </div> */}
             <div>
               <EmailIcon /> info@rkumarfinancial.com
             </div>
